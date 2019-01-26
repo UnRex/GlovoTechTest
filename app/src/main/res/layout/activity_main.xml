@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <fragment
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/map"
+            tools:context=".ui.main.MainActivity"
+            android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="150dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:alpha=".85"
+                    android:background="@android:color/white"
+                    android:layout_alignBottom="@id/map"
+                    android:padding="16dp">
+
+        <TextView
+                android:id="@+id/no_info"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/no_info"
+                android:gravity="center"
+                />
+
+        <RelativeLayout
+                android:id="@+id/info_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+            <TextView
+                    android:id="@+id/info_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/info_city"
+                    android:layout_marginEnd="5dp"/>
+            <TextView
+                    android:id="@+id/info_city_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bilbao"
+                    android:layout_toEndOf="@id/info_city"/>
+
+            <TextView
+                    android:id="@+id/info_country"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/info_country"
+                    android:layout_below="@id/info_city"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:id="@+id/info_country_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Spain"
+                    android:layout_below="@id/info_city"
+                    android:layout_toEndOf="@id/info_country"
+                    android:layout_marginTop="8dp"/>
+
+            <TextView
+                    android:id="@+id/info_enabled"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/info_country"
+                    android:text="@string/info_enabled"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:id="@+id/info_enabled_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes"
+                    android:layout_below="@id/info_country"
+                    android:layout_toEndOf="@id/info_enabled"
+                    android:layout_marginTop="8dp"/>
+
+            <TextView
+                    android:id="@+id/info_busy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/info_enabled"
+                    android:text="@string/info_busy"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:id="@+id/info_busy_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:layout_below="@id/info_enabled"
+                    android:layout_toEndOf="@id/info_busy"
+                    android:layout_marginTop="8dp"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>
